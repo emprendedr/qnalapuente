@@ -244,64 +244,6 @@
             background: rgba(147, 112, 219, 0.1);
             border-left: 6px solid #9370DB;
         }
-        
-        /* FAQ Items Estilo Mejorado */
-        .faq-item {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            margin-bottom: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .faq-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-        }
-
-        .faq-question {
-            cursor: pointer;
-            padding: 18px 22px;
-            font-weight: bold;
-            font-size: 1.15em;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(64, 224, 208, 0.15);
-            transition: background 0.3s;
-            border-bottom: 1px solid rgba(229, 231, 235, 0.3);
-            color: #e0ffff;
-        }
-        .faq-question:hover {
-            background: rgba(64, 224, 208, 0.25);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease, padding 0.5s ease;
-            padding: 0 22px;
-            background: rgba(255, 255, 255, 0.03);
-        }
-        .faq-answer p {
-            margin: 15px 0;
-            line-height: 1.6em;
-            font-size: 1.05em;
-            color: #e0ffff;
-        }
-        .faq-answer span {
-            color: #98fb98;
-            font-weight: bold;
-        }
-
-        .toggle-icon {
-            font-weight: bold;
-            font-size: 1.5em;
-            color: #40e0d0;
-            transition: transform 0.3s;
-        }
-        
         .faq-link-button {
             display: inline-block;
             background: linear-gradient(90deg, #9370DB, #BA55D3);
@@ -383,8 +325,6 @@
             .earnings-table { font-size: 0.9rem; }
             .earnings-table th, .earnings-table td { padding: 0.6rem; }
             .matrix-total { font-size: 1.5rem; }
-            .faq-question { padding: 15px 18px; font-size: 1.1em; }
-            .faq-answer p { font-size: 1em; }
         }
     </style>
 </head>
@@ -513,162 +453,16 @@
             </div>
         </section>
 
-        <!-- Sección: Preguntas Frecuentes Ampliada -->
+        <!-- Sección: Preguntas y Respuestas Comunes (FAQ) - Enlace a página separada -->
         <section class="section faq-section">
-            <h2 class="section-title">Preguntas Frecuentes - Todo lo que Necesitas Saber</h2>
-            
-            <div style="text-align: center; margin-bottom: 2rem;">
-                <a href="https://aiviraldownline.com/lc.php?id=ialapuente1" class="register-button" target="_blank">
-                    ¡REGÍSTRATE GRATIS AQUÍ!
-                </a>
-            </div>
+            <h2 class="section-title">¿Tienes más preguntas? Te tenemos cubierto</h2>
+            <p>Consulta nuestra sección completa de Preguntas Frecuentes (FAQ) para aclarar cualquier duda sobre el programa, pagos, el rol de Emily o cómo comenzar.</p>
+            <p>Encontrarás respuestas detalladas y claras a las preguntas más comunes que tienen nuestros miembros.</p>
 
-            <!-- Nuevas FAQs -->
-            <div class="faq-item">
-                <div class="faq-question">1. ¿Qué es AI Viral Downline? <span class="toggle-icon">+</span></div>
-                <div class="faq-answer">
-                    <p>Es un sistema automatizado que utiliza IA y redes sociales para ayudarte a atraer personas, presentar la oportunidad y generar ingresos de forma escalable.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">2. ¿Necesito experiencia previa? <span class="toggle-icon">+</span></div>
-                <div class="faq-answer">
-                    <p>No. El sistema está diseñado para principiantes y expertos.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">3. ¿Tengo que crear contenido? <span class="toggle-icon">+</span></div>
-                <div class="faq-answer">
-                    <p>No es obligatorio. Puedes usar contenido, embudos y automatizaciones ya hechas.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">4. ¿Cómo gano dinero? <span class="toggle-icon">+</span></div>
-                <div class="faq-answer">
-                    <p>Ganas comisiones por cada persona que se activa en tu red y por el crecimiento de tu downline.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">5. ¿Qué es el "spillover" o derrame? <span class="toggle-icon">+</span></div>
-                <div class="faq-answer">
-                    <p>Es cuando el sistema coloca personas debajo de ti automáticamente, incluso si no las referiste.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">6. ¿Cuánto puedo ganar? <span class="toggle-icon">+</span></div>
-                <div class="faq-answer">
-                    <p>Depende de tu nivel y estructura, pero hay personas generando ingresos diarios y mensuales recurrentes.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">7. ¿Cuánto cuesta entrar? <span class="toggle-icon">+</span></div>
-                <div class="faq-answer">
-                    <p>Hay un costo de activación accesible (varía según promoción).</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">8. ¿Hay pagos mensuales? <span class="toggle-icon">+</span></div>
-                <div class="faq-answer">
-                    <p>Sí, es una membresía que mantiene activo el sistema y las automatizaciones.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">9. ¿Cómo se reciben los pagos? <span class="toggle-icon">+</span></div>
-                <div class="faq-answer">
-                    <p>Por plataformas digitales (dependiendo del país).</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">10. ¿Cuánto tiempo toma ver resultados? <span class="toggle-icon">+</span></div>
-                <div class="faq-answer">
-                    <p>Algunos ven resultados en días; otros en semanas. La consistencia es clave.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">11. ¿Funciona en cualquier país? <span class="toggle-icon">+</span></div>
-                <div class="faq-answer">
-                    <p>Sí, es un sistema global.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">12. ¿Necesito invitar personas? <span class="toggle-icon">+</span></div>
-                <div class="faq-answer">
-                    <p>Puedes hacerlo, pero el sistema también trabaja por ti.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">13. ¿Puedo usarlo con mi marca personal? <span class="toggle-icon">+</span></div>
-                <div class="faq-answer">
-                    <p>Sí, es ideal para emprendedores, coaches y creadores de contenido.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">14. ¿Incluye entrenamiento? <span class="toggle-icon">+</span></div>
-                <div class="faq-answer">
-                    <p>Sí, incluye capacitaciones paso a paso.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">15. ¿Es legal? <span class="toggle-icon">+</span></div>
-                <div class="faq-answer">
-                    <p>Sí, es un modelo digital basado en membresía y afiliación.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">16. ¿Cuántas horas al día necesito? <span class="toggle-icon">+</span></div>
-                <div class="faq-answer">
-                    <p>De 30 a 60 minutos diarios es suficiente al inicio.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">17. ¿Hay soporte? <span class="toggle-icon">+</span></div>
-                <div class="faq-answer">
-                    <p>Sí, soporte técnico y comunidad activa.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">18. ¿Necesito invertir en publicidad? <span class="toggle-icon">+</span></div>
-                <div class="faq-answer">
-                    <p>No es obligatorio, pero puede acelerar resultados.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">19. ¿Puedo hacerlo desde el celular? <span class="toggle-icon">+</span></div>
-                <div class="faq-answer">
-                    <p>Sí, 100% móvil.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">20. ¿Cómo empiezo? <span class="toggle-icon">+</span></div>
-                <div class="faq-answer">
-                    <p>Regístrate <a href="https://aiviraldownline.com/lc.php?id=ialapuente1" style="color:#40e0d0; font-weight:bold;">aquí</a>, activa tu cuenta y sigue el entrenamiento inicial.</p>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="https://aiviraldownline.com/lc.php?id=ialapuente1" class="register-button" target="_blank">
-                    ¡COMIENZA TU PRUEBA GRATUITA DE 7 DÍAS!
-                </a>
-            </div>
+            <a href="faq-aiviral.html" class="faq-link-button" target="_blank">
+                📚 Ir a Preguntas Frecuentes (FAQ)
+            </a>
+            <p style="margin-top: 1rem; font-size: 0.9rem;"><em>Serás dirigido a nuestra página oficial de FAQ.</em></p>
         </section>
 
         <!-- Sección de Llamado a la Acción (CTA) -->
@@ -714,45 +508,6 @@
     <script>
         // Año actual en el pie de página
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-        
-        // Acordeón interactivo para FAQs
-        const faqItems = document.querySelectorAll('.faq-question');
-        faqItems.forEach(item => {
-            item.addEventListener('click', () => {
-                const answer = item.nextElementSibling;
-                const icon = item.querySelector('.toggle-icon');
-                
-                // Cerrar otros abiertos
-                faqItems.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        const otherAnswer = otherItem.nextElementSibling;
-                        const otherIcon = otherItem.querySelector('.toggle-icon');
-                        if(otherAnswer.style.maxHeight){
-                            otherAnswer.style.maxHeight = null;
-                            otherAnswer.style.paddingTop = "0";
-                            otherAnswer.style.paddingBottom = "0";
-                            otherIcon.textContent = "+";
-                            otherIcon.style.transform = "rotate(0deg)";
-                        }
-                    }
-                });
-                
-                // Abrir/cerrar actual
-                if(answer.style.maxHeight){
-                    answer.style.maxHeight = null;
-                    answer.style.paddingTop = "0";
-                    answer.style.paddingBottom = "0";
-                    icon.textContent = "+";
-                    icon.style.transform = "rotate(0deg)";
-                } else {
-                    answer.style.maxHeight = answer.scrollHeight + "px";
-                    answer.style.paddingTop = "15px";
-                    answer.style.paddingBottom = "15px";
-                    icon.textContent = "−";
-                    icon.style.transform = "rotate(180deg)";
-                }
-            });
-        });
     </script>
 </body>
 </html>
