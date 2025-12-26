@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aiviraljobslapuente - Deja que la IA Construya Tu Línea Descendente</title>
+    <style>
+        /* ===== ESTILOS GENERALES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #f0f8ff;
+            line-height: 1.7;
+            min-height: 100vh;
+            padding-bottom: 2rem;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+
+        /* ===== CABECERA ===== */
+        header {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 20px;
+            margin-bottom: 2.5rem;
+            border: 1px solid rgba(64, 224, 208, 0.3);
+        }
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: #40e0d0;
+            text-shadow: 0 0 10px rgba(64, 224, 208, 0.5);
+        }
+        .tagline {
+            font-size: 1.4rem;
+            color: #b0e0e6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* ===== SECCIONES GENERALES ===== */
+        .section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .section-title {
+            color: #40e0d0;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        /* ===== CONTENEDORES DE VIDEO ===== */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* Relación 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-top: 1rem;
+            background: #000;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* ===== LISTA DE FUNCIONES DE EMILY ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .feature-card {
+            background: rgba(32, 58, 67, 0.7);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #40e0d0;
+        }
+        .feature-card h3 {
+            color: #98fb98;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        /* ===== SECCIÓN DE LLAMADO A LA ACCIÓN (CTA) ===== */
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(to right, #1d4350, #2c5364);
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+        }
+        .cta-title {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: #7fffd4;
+        }
+        .cta-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            color: #b0e0e6;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===== BOTONES ===== */
+        .whatsapp-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #25D366, #128C7E);
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 1rem 2.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            margin: 1rem 0.5rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+        }
+        .whatsapp-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6);
+            background: linear-gradient(90deg, #128C7E, #25D366);
+        }
+        
+        .register-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #00c9ff, #92fe9d);
+            color: #0f2027;
+            font-weight: bold;
+            font-size: 1.3rem;
+            padding: 1.2rem 3.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            margin: 1.5rem 0;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 201, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+        .register-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 201, 255, 0.6);
+            background: linear-gradient(90deg, #92fe9d, #00c9ff);
+        }
+        .risk-free {
+            color: #98fb98;
+            font-style: italic;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* ===== SECCIÓN: TU MATRIZ 3x8 ===== */
+        .income-section {
+            background: rgba(15, 32, 39, 0.85);
+            border-left: 6px solid #FFA500;
+        }
+        .income-intro, .payouts, .breakdown {
+            margin-bottom: 2.5rem;
+        }
+        .income-intro p, .payouts p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: #e0ffff;
+        }
+        .highlight-box {
+            background: rgba(255, 165, 0, 0.1);
+            border: 1px solid #FFA500;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .highlight-box h3 {
+            color: #FFD700;
+            margin-bottom: 0.8rem;
+        }
+        .payout-list {
+            list-style: none;
+            padding-left: 1rem;
+        }
+        .payout-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .payout-list li:before {
+            content: '💰';
+            position: absolute;
+            left: 0;
+        }
+        .earnings-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .earnings-table th, .earnings-table td {
+            border: 1px solid #2c5364;
+            padding: 0.9rem;
+            text-align: center;
+        }
+        .earnings-table th {
+            background-color: #1d4350;
+            color: #7fffd4;
+        }
+        .earnings-table .total-row {
+            font-weight: bold;
+            background-color: rgba(255, 215, 0, 0.15);
+            color: #FFD700;
+        }
+        .matrix-total {
+            font-size: 1.8rem;
+            color: #92fe9d;
+            text-align: center;
+            margin-top: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* ===== SECCIÓN DE PREGUNTAS FRECUENTES (FAQ) ===== */
+        .faq-section {
+            background: rgba(147, 112, 219, 0.1);
+            border-left: 6px solid #9370DB;
+        }
+        
+        /* FAQ Items Estilo Mejorado */
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .faq-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+
+        .faq-question {
+            cursor: pointer;
+            padding: 18px 22px;
+            font-weight: bold;
+            font-size: 1.15em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(64, 224, 208, 0.15);
+            transition: background 0.3s;
+            border-bottom: 1px solid rgba(229, 231, 235, 0.3);
+            color: #e0ffff;
+        }
+        .faq-question:hover {
+            background: rgba(64, 224, 208, 0.25);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.5s ease;
+            padding: 0 22px;
+            background: rgba(255, 255, 255, 0.03);
+        }
+        .faq-answer p {
+            margin: 15px 0;
+            line-height: 1.6em;
+            font-size: 1.05em;
+            color: #e0ffff;
+        }
+        .faq-answer span {
+            color: #98fb98;
+            font-weight: bold;
+        }
+
+        .toggle-icon {
+            font-weight: bold;
+            font-size: 1.5em;
+            color: #40e0d0;
+            transition: transform 0.3s;
+        }
+        
+        .faq-link-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #9370DB, #BA55D3);
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 1rem 2.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .faq-link-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(147, 112, 219, 0.5);
+            background: linear-gradient(90deg, #BA55D3, #9370DB);
+        }
+
+        /* ===== ESTILOS PARA EL FOOTER ACTUALIZADO ===== */
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(64, 224, 208, 0.2);
+            color: #87ceeb;
+            font-size: 0.95rem;
+        }
+        .footer-credit {
+            background: rgba(15, 32, 39, 0.6);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #40e0d0;
+        }
+        .footer-credit p {
+            margin-bottom: 0.7rem;
+        }
+        .highlight-contact {
+            font-size: 1.1rem;
+            color: #7fffd4;
+            margin-top: 1rem !important;
+        }
+        .highlight-contact a {
+            color: #7fffd4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .highlight-contact a:hover {
+            text-decoration: underline;
+            color: #92fe9d;
+        }
+        .footer-bottom {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #87ceeb;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .footer-bottom p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* ===== DISEÑO RESPONSIVE PARA MÓVILES ===== */
+        @media (max-width: 768px) {
+            .container { padding: 1rem; }
+            h1 { font-size: 2.2rem; }
+            .tagline, .cta-subtitle { font-size: 1.1rem; }
+            .section { padding: 1.5rem; }
+            .cta-title { font-size: 1.8rem; }
+            .register-button, .faq-link-button, .whatsapp-button {
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+                width: 90%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .features-grid { grid-template-columns: 1fr; }
+            .earnings-table { font-size: 0.9rem; }
+            .earnings-table th, .earnings-table td { padding: 0.6rem; }
+            .matrix-total { font-size: 1.5rem; }
+            .faq-question { padding: 15px 18px; font-size: 1.1em; }
+            .faq-answer p { font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Cabecera con título y eslogan -->
+        <header>
+            <h1>Aiviraljobslapuente</h1>
+            <p class="tagline">Deja que la IA Construya Tu Línea Descendente Mientras Tú Relajas</p>
+            <p class="tagline">Emily explica tu negocio, responde preguntas y cierra a tus prospectos — las 24 horas del día.</p>
+        </header>
+
+        <!-- Primer video (Intro de Emily) -->
+        <section class="section">
+            <h2 class="section-title">Mira este corto video</h2>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/IBhOkKNunkc"
+                        title="Presentación de Emily - IA para Negocios"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Sección: Lo que Emily hará por ti -->
+        <section class="section">
+            <h2 class="section-title">Lo que Emily hará por ti</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🧠 Explica de forma sencilla</h3>
+                    <p>Explica la línea descendente viral con IA en un lenguaje claro y fácil de entender para cualquier prospecto.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Desglosa la matriz 3x8</h3>
+                    <p>Descompone la estructura de compensación para que los prospectos la entiendan al instante, sin confusiones.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🛡️ Supera objeciones</h3>
+                    <p>Anticipa y responde a las dudas comunes antes de que la gente siquiera las pregunte, allanando el camino.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🤖 Guía el registro automático</h3>
+                    <p>Guía paso a paso a los prospectos para que se unan a tu equipo de manera automática y sin esfuerzo para ti.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Segundo video (Presentación completa) -->
+        <section class="section">
+            <h2 class="section-title">Presentación Completa del Sistema</h2>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/A8bGvBjWgkw"
+                        title="Presentación Completa del Programa AIViralDownline"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Sección: Tu Matriz 3x8 - Ingresos Residuales -->
+        <section class="section income-section">
+            <h2 class="section-title">Tu Matriz 3x8 — Ingresos Residuales a partir del Mes 2</h2>
+
+            <div class="income-intro">
+                <p>Como miembro <strong>GRATUITO</strong>, ya ocupas una posición en la matriz. Una vez que te actualices, desbloqueas toda la estructura de ingresos, <strong>incluyendo la capacidad de ganar durante tu prueba de 7 días</strong>.</p>
+            </div>
+
+            <div class="payouts">
+                <h3>💰 Pagos Mensuales de la Matriz</h3>
+                <ul class="payout-list">
+                    <li><strong>Nivel 1</strong> — $10 por miembro (3 miembros = $30/mes - ¡No importa cómo lleguen a ti!)</li>
+                    <li><strong>Niveles 2–7</strong> — $2 por miembro mensual (Ganas Comisiones de Matriz del Nivel 1 al 7 con <strong>cero</strong> referidos personales)</li>
+                    <li><strong>Nivel 8</strong> — $3 por miembro (Requiere solo 3 referidos personales)</li>
+                </ul>
+                <div class="highlight-box">
+                    <h3>🚨 Beneficio Clave</h3>
+                    <p>Con solo 3 miembros en el Nivel 1, tu membresía se paga sola — ya sea que vengan de tus referidos o del "spillover" (derrame) del sistema.</p>
+                </div>
+            </div>
+
+            <div class="breakdown">
+                <h3>📈 Desglose de Ganancias — Tu Potencial de Ingresos</h3>
+                <p>Los niveles 1–7 pueden pagar hasta <strong>$6,582/mes sin necesidad de patrocinar a nadie</strong>. Si añades el Nivel 8, la matriz completa suma <strong>$26,265 mensuales</strong>.</p>
+
+                <h4>Niveles 1–7 (Ganancias sin patrocinio)</h4>
+                <table class="earnings-table">
+                    <thead>
+                        <tr>
+                            <th>Nivel</th>
+                            <th>Miembros</th>
+                            <th>Comisión por Miembro</th>
+                            <th>Ingreso Mensual</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Nivel 1</td><td>3</td><td>$10</td><td>$30</td></tr>
+                        <tr><td>Nivel 2</td><td>9</td><td>$2</td><td>$18</td></tr>
+                        <tr><td>Nivel 3</td><td>27</td><td>$2</td><td>$54</td></tr>
+                        <tr><td>Nivel 4</td><td>81</td><td>$2</td><td>$162</td></tr>
+                        <tr><td>Nivel 5</td><td>243</td><td>$2</td><td>$486</td></tr>
+                        <tr><td>Nivel 6</td><td>729</td><td>$2</td><td>$1,458</td></tr>
+                        <tr><td>Nivel 7</td><td>2,187</td><td>$2</td><td>$4,374</td></tr>
+                        <tr class="total-row">
+                            <td colspan="3"><strong>TOTAL (Niveles 1-7)</strong></td>
+                            <td><strong>$6,582/mes</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>Nivel 8 (Con solo 3 referidos personales)</h4>
+                <table class="earnings-table">
+                    <thead>
+                        <tr>
+                            <th>Nivel</th>
+                            <th>Miembros</th>
+                            <th>Comisión por Miembro</th>
+                            <th>Ingreso Mensual</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Nivel 8</td><td>6,561</td><td>$3</td><td>$19,683</td></tr>
+                    </tbody>
+                </table>
+
+                <p class="matrix-total">🔥 Total de Matriz Completa: $26,265/mes</p>
+            </div>
+        </section>
+
+        <!-- Sección: Preguntas Frecuentes Ampliada -->
+        <section class="section faq-section">
+            <h2 class="section-title">Preguntas Frecuentes - Todo lo que Necesitas Saber</h2>
+            
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <a href="https://aiviraldownline.com/lc.php?id=ialapuente1" class="register-button" target="_blank">
+                    ¡REGÍSTRATE GRATIS AQUÍ!
+                </a>
+            </div>
+
+            <!-- Nuevas FAQs -->
+            <div class="faq-item">
+                <div class="faq-question">1. ¿Qué es AI Viral Downline? <span class="toggle-icon">+</span></div>
+                <div class="faq-answer">
+                    <p>Es un sistema automatizado que utiliza IA y redes sociales para ayudarte a atraer personas, presentar la oportunidad y generar ingresos de forma escalable.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">2. ¿Necesito experiencia previa? <span class="toggle-icon">+</span></div>
+                <div class="faq-answer">
+                    <p>No. El sistema está diseñado para principiantes y expertos.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">3. ¿Tengo que crear contenido? <span class="toggle-icon">+</span></div>
+                <div class="faq-answer">
+                    <p>No es obligatorio. Puedes usar contenido, embudos y automatizaciones ya hechas.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">4. ¿Cómo gano dinero? <span class="toggle-icon">+</span></div>
+                <div class="faq-answer">
+                    <p>Ganas comisiones por cada persona que se activa en tu red y por el crecimiento de tu downline.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">5. ¿Qué es el "spillover" o derrame? <span class="toggle-icon">+</span></div>
+                <div class="faq-answer">
+                    <p>Es cuando el sistema coloca personas debajo de ti automáticamente, incluso si no las referiste.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">6. ¿Cuánto puedo ganar? <span class="toggle-icon">+</span></div>
+                <div class="faq-answer">
+                    <p>Depende de tu nivel y estructura, pero hay personas generando ingresos diarios y mensuales recurrentes.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">7. ¿Cuánto cuesta entrar? <span class="toggle-icon">+</span></div>
+                <div class="faq-answer">
+                    <p>Hay un costo de activación accesible (varía según promoción).</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">8. ¿Hay pagos mensuales? <span class="toggle-icon">+</span></div>
+                <div class="faq-answer">
+                    <p>Sí, es una membresía que mantiene activo el sistema y las automatizaciones.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">9. ¿Cómo se reciben los pagos? <span class="toggle-icon">+</span></div>
+                <div class="faq-answer">
+                    <p>Por plataformas digitales (dependiendo del país).</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">10. ¿Cuánto tiempo toma ver resultados? <span class="toggle-icon">+</span></div>
+                <div class="faq-answer">
+                    <p>Algunos ven resultados en días; otros en semanas. La consistencia es clave.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">11. ¿Funciona en cualquier país? <span class="toggle-icon">+</span></div>
+                <div class="faq-answer">
+                    <p>Sí, es un sistema global.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">12. ¿Necesito invitar personas? <span class="toggle-icon">+</span></div>
+                <div class="faq-answer">
+                    <p>Puedes hacerlo, pero el sistema también trabaja por ti.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">13. ¿Puedo usarlo con mi marca personal? <span class="toggle-icon">+</span></div>
+                <div class="faq-answer">
+                    <p>Sí, es ideal para emprendedores, coaches y creadores de contenido.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">14. ¿Incluye entrenamiento? <span class="toggle-icon">+</span></div>
+                <div class="faq-answer">
+                    <p>Sí, incluye capacitaciones paso a paso.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">15. ¿Es legal? <span class="toggle-icon">+</span></div>
+                <div class="faq-answer">
+                    <p>Sí, es un modelo digital basado en membresía y afiliación.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">16. ¿Cuántas horas al día necesito? <span class="toggle-icon">+</span></div>
+                <div class="faq-answer">
+                    <p>De 30 a 60 minutos diarios es suficiente al inicio.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">17. ¿Hay soporte? <span class="toggle-icon">+</span></div>
+                <div class="faq-answer">
+                    <p>Sí, soporte técnico y comunidad activa.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">18. ¿Necesito invertir en publicidad? <span class="toggle-icon">+</span></div>
+                <div class="faq-answer">
+                    <p>No es obligatorio, pero puede acelerar resultados.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">19. ¿Puedo hacerlo desde el celular? <span class="toggle-icon">+</span></div>
+                <div class="faq-answer">
+                    <p>Sí, 100% móvil.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">20. ¿Cómo empiezo? <span class="toggle-icon">+</span></div>
+                <div class="faq-answer">
+                    <p>Regístrate <a href="https://aiviraldownline.com/lc.php?id=ialapuente1" style="color:#40e0d0; font-weight:bold;">aquí</a>, activa tu cuenta y sigue el entrenamiento inicial.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="https://aiviraldownline.com/lc.php?id=ialapuente1" class="register-button" target="_blank">
+                    ¡COMIENZA TU PRUEBA GRATUITA DE 7 DÍAS!
+                </a>
+            </div>
+        </section>
+
+        <!-- Sección de Llamado a la Acción (CTA) -->
+        <section class="cta-section">
+            <h2 class="cta-title">¡Desbloquea a Emily y Tu Prueba Gratuita de 7 Días!</h2>
+            <p class="cta-subtitle">Da el primer paso para automatizar tu negocio y activar tu potencial de ingresos residuales. El registro es rápido, sencillo y sin compromiso.</p>
+
+            <!-- Botón de WhatsApp -->
+            <a href="https://api.whatsapp.com/send?phone=16263913127&text=Hola%2C%20me%20ayuda%20con%20el%20paso%20a%20paso%20para%20afiliarme%20con%20Aiviraldownline%3F%20Soy%20" 
+               class="whatsapp-button" target="_blank">
+                💬 ¿Necesitas Ayuda? Escríbeme por WhatsApp
+            </a>
+            
+            <!-- Botón de Registro Principal -->
+            <a href="https://aiviraldownline.com/lc.php?id=ialapuente1" class="register-button" target="_blank">
+                ¡COMIENZA TU PRUEBA GRATUITA DE 7 DÍAS!
+            </a>
+            
+            <p class="risk-free">¡No tienes absolutamente nada que perder!</p>
+            <p><small>Al hacer clic, serás dirigido a la página oficial de registro de AI Viral Downline.</small></p>
+        </section>
+
+        <!-- FOOTER ACTUALIZADO -->
+        <footer>
+            <div class="footer-content">
+                <!-- Información de contacto -->
+                <div class="footer-credit">
+                    <p>💡 <strong>Este sitio está asociado con Aiviraldownline</strong> para ayudarte a duplicarte más rápido en el negocio digital.</p>
+                    <p><strong>Contacto:</strong> Reyna Sánchez</p>
+                    <p class="highlight-contact">📧 <a href="mailto:reynasanchez4141@gmail.com">reynasanchez4141@gmail.com</a></p>
+                    <p><strong>WhatsApp:</strong> <a href="https://api.whatsapp.com/send?phone=16263913127&text=Hola%2C%20me%20ayuda%20con%20el%20paso%20a%20paso%20para%20afiliarme%20con%20Aiviraldownline%3F%20Soy%20" target="_blank">+1 (626) 391-3127</a></p>
+                </div>
+
+                <!-- Línea de derechos de autor -->
+                <div class="footer-bottom">
+                    <p>Todos los derechos reservados © <span id="currentYear"></span> Aiviraljobslapuente.</p>
+                    <p>Este sitio está asociado al programa AI Viral Downline.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Año actual en el pie de página
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Acordeón interactivo para FAQs
+        const faqItems = document.querySelectorAll('.faq-question');
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                const icon = item.querySelector('.toggle-icon');
+                
+                // Cerrar otros abiertos
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        const otherAnswer = otherItem.nextElementSibling;
+                        const otherIcon = otherItem.querySelector('.toggle-icon');
+                        if(otherAnswer.style.maxHeight){
+                            otherAnswer.style.maxHeight = null;
+                            otherAnswer.style.paddingTop = "0";
+                            otherAnswer.style.paddingBottom = "0";
+                            otherIcon.textContent = "+";
+                            otherIcon.style.transform = "rotate(0deg)";
+                        }
+                    }
+                });
+                
+                // Abrir/cerrar actual
+                if(answer.style.maxHeight){
+                    answer.style.maxHeight = null;
+                    answer.style.paddingTop = "0";
+                    answer.style.paddingBottom = "0";
+                    icon.textContent = "+";
+                    icon.style.transform = "rotate(0deg)";
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                    answer.style.paddingTop = "15px";
+                    answer.style.paddingBottom = "15px";
+                    icon.textContent = "−";
+                    icon.style.transform = "rotate(180deg)";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
